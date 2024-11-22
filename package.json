@@ -1,0 +1,22 @@
+{
+  "name": "task2-playwright-redmine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "test:headless": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.9.0",
+    "allure-playwright": "^3.0.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "uuid": "^11.0.3"
+  }
+}
