@@ -5,7 +5,7 @@ export class IssuesPage{
         this.idLink = page.locator('th.id > a')
         this.firstResultId = page.locator('tbody > tr:nth-child(1) > td.id > a')
         this.lastPageOfResults = page.locator('//li[@class="next page"]/preceding-sibling::li[1]')
-        this.lastResultId = page.locator('tbody > tr:nth-child(17) > td.id > a')
+        this.lastResultId = page.locator('tbody > tr:last-child > td.id > a')
     }
 
     async clickOnIdColumnLink(){
