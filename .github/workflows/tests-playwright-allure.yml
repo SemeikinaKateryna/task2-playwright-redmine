@@ -24,13 +24,6 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install
 
-    - name: Run Playwright tests
-      run: npm run test:headless
-
-    - name: Generate Allure Report
-      if: always()
-      run: npm run allure:generate
-
     - name: Load test report history
       uses: actions/checkout@v3
       if: always()
@@ -39,9 +32,18 @@ jobs:
         ref: gh-pages
         path: gh-pages
 
-    - name: Copy Allure history
+    - name: Copy Allure history to results
       if: always()
-      run: npm run allure:copy-history
+      run: |
+        mkdir -p allure-results/history
+        cp -R gh-pages/history/* allure-results/history/ || true
+
+    - name: Run Playwright tests
+      run: npm run test:headless
+
+    - name: Generate Allure Report
+      if: always()
+      run: npm run allure:generate
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
