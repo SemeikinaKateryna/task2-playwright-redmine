@@ -23,6 +23,14 @@ jobs:
 
     - name: Install Playwright Browsers
       run: npx playwright install
+      
+    - name: Load test report history
+      uses: actions/checkout@v3
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
         
     - name: Copy Allure history to results
       if: always()
