@@ -23,9 +23,6 @@ jobs:
 
     - name: Install Playwright Browsers
       run: npx playwright install
-
-    - name: Run Playwright tests
-      run: npm run test:headless
       
     - name: Load test report history
       uses: actions/checkout@v3
@@ -38,7 +35,10 @@ jobs:
     - name: Copy Allure history to results
       if: always()
       run: npm run allure:copy-history
-        
+
+    - name: Run Playwright tests
+      run: npm run test:headless
+      
     - name: Build test report
       if: always()
       run: npm run allure:generate
