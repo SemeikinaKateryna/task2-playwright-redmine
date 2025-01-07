@@ -30,7 +30,7 @@ jobs:
       continue-on-error: true
       with:
         ref: gh-pages
-        path: gh-pages
+        path: history
         
     - name: Copy Allure history to results
       if: always()
