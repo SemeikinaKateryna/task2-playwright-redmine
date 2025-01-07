@@ -34,9 +34,7 @@ jobs:
 
     - name: Copy Allure history to results
       if: always()
-      run: |
-        mkdir -p allure-results/history
-        cp -R gh-pages/history/* allure-results/history/ || true
+      run: npm run allure:copy-history
 
     - name: Run Playwright tests
       run: npm run test:headless
