@@ -155,6 +155,6 @@ test("should verify link to the installation guide in FAQ section", async({ page
     await expect(page).toHaveURL(/RedmineInstall$/)
 
     const installingPage = new InstallingPage(page)
-    await expect(installingPage.header).toHaveText(/Installing Redmine1/)
+    await expect(installingPage.header).toHaveText(/Installing Redmine/)
 })
 
