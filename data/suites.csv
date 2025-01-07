@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","16101","should search by keyword with filters","chromium","Sat Dec 21 20:15:45 UTC 2024","passed","Sat Dec 21 20:16:01 UTC 2024","","redmine_testing.spec.js","",""
+"","12800","should not log in with invalid credentials","chromium","Sat Dec 21 20:15:45 UTC 2024","passed","Sat Dec 21 20:15:58 UTC 2024","","redmine_testing.spec.js","",""
+"","13418","should sort issues by ID ASC","chromium","Sat Dec 21 20:15:45 UTC 2024","passed","Sat Dec 21 20:15:59 UTC 2024","","redmine_testing.spec.js","",""
+"","13522","should verify link to the installation guide in FAQ section","chromium","Sat Dec 21 20:15:45 UTC 2024","passed","Sat Dec 21 20:15:59 UTC 2024","","redmine_testing.spec.js","",""
+"","14203","should register with valid credentials without email confirmation","chromium","Sat Dec 21 20:15:45 UTC 2024","passed","Sat Dec 21 20:16:00 UTC 2024","","redmine_testing.spec.js","",""
