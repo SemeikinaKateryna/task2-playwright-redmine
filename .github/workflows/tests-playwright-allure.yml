@@ -35,12 +35,13 @@ jobs:
         ref: gh-pages
         path: gh-pages
         
-    - name: Copy Allure history to results
-      if: always()
-      run: npm run allure:copy-history
-        
     - name: Build test report
-      run: npm run allure:generate
+      uses: simple-elf/allure-report-action@v1.7
+      if: always()
+      with:
+        gh_pages: gh-pages
+        allure_history: allure-history
+        allure_results: allure-result
         
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
