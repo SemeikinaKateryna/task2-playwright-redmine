@@ -39,12 +39,6 @@ jobs:
       if: always()
       run: npm run allure:generate
       
-    - name: Copy Allure report history
-      if: always()
-      run: |
-        mkdir -p playwright-report
-        cp -R gh-pages-history/* playwright-report/ || true
-
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
       if: always()
