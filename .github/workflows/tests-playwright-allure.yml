@@ -41,9 +41,7 @@ jobs:
 
     - name: Copy Allure history
       if: always()
-      run: |
-        mkdir -p allure-report/history
-        cp -R gh-pages/history/* allure-report/history/ || true
+      run: npm run allure:copy-history
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
