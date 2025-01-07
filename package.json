@@ -6,7 +6,7 @@
     "test": "playwright test --headed",
     "test:headless": "playwright test",
     "allure:generate": "npx allure generate allure-results --clean -o allure-report",
-    "allure:copy-history": "cp -R gh-pages/history/* allure-report/history/ || true"
+    "allure:copy-history": "cp -R gh-pages/history/* allure-report/history/"
   },
   "keywords": [],
   "author": "",
