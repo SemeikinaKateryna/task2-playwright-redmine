@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test --headed",
-    "test:headless": "playwright test"
+    "test:headless": "playwright test",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:copy-history": "mkdir -p allure-report/history && cp -R gh-pages/history/* allure-report/history/ || true"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,8 @@
   "devDependencies": {
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.9.0",
-    "allure-playwright": "^3.0.6"
+    "allure-playwright": "^3.0.6",
+    "allure-commandline": "^2.24.0"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
