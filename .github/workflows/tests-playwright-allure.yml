@@ -35,6 +35,10 @@ jobs:
         ref: gh-pages
         path: gh-pages
         
+    - name: Copy Allure history to results
+      if: always()
+      run: npm run allure:copy-history
+        
     - name: Build test report
       run: npm run allure:generate
         
